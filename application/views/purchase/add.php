@@ -203,7 +203,7 @@
         <?php else : ?>
             var division_id = '<?=getSessionAdmin('admin_id_division')?>';
         <?php endif; ?>
-        html = '<tr id="row_'+ row_ +'">';
+        html = '<tr id="row'+ row_ +'">';
         html += '<td class="code"><input type="text" name="post_production['+ row_ +'][code]" id="post_production_code_'+ row_ +'" value="" class="input-text"/></td>';
         html += '<td class="name productionOption">';
         html += '<select name="post_production['+ row_ +'][id]" id="post_production_id_'+ row_ +'" data-id="'+row_+'">';
@@ -218,7 +218,7 @@
         html += '<td class="hpp"><input type="text" name="post_production['+ row_ +'][hpp]" id="post_production_hpp_'+ row_ +'" value="" class="input-text number_only" placeholder="Rp. "/></td>';
         html += '<td class="discount"><input type="text" name="post_production['+ row_ +'][discount]" id="post_production_discount_'+ row_ +'" value="" class="input-text number_only" placeholder="Rp. "/></td>';
         */
-        html += '<td><button type="button" class="btn btn-danger delProduction" id="delProduction-'+ row_ +'" onclick="delProduction(\''+row_+'\')">(-)</button></td>';
+        html += '<td><button type="button" class="btn btn-danger delProduction" id="delProduction-'+ row_ +'" onclick="delProduction(\''+row_+'\');">(-)</button></td>';
         html += '</tr>';
         $('#tableProduction #tableFooter').before(html);
         $("#post_production_id_"+ row_).select2({
@@ -252,7 +252,7 @@
     
     function delProduction(id) {
         $("#row"+id).remove();
-        row--;
+        //row--;
     }
     
 </script>
