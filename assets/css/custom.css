@@ -1,0 +1,27 @@
+
+/* 
+    Created on : Jan 16, 2014, 12:22:16 PM
+    Author     : Ivan Lubis
+*/
+
+.error {color: red;}
+
+.dropdown-submenu > .dropdown-menu {margin-top: -1px !important;}
+
+.listProduct {margin-top: 30px;}
+#tableProduct td#qty {width: 40px;}
+#tableProduct td.qty input {width: 50px;}
+#tableProduct td.price input {width: 100px;}
+.suppptrans-detail label {display: inline;}
+.text-right {text-align: right !important;}
+.text-left {text-align: left !important;}
+.text-center {text-align: center !important;}
+.row-label label {display: inline;}
+input.select2-input {width: 100% !important;}
+#tableOtherCost .othercost-input {width: 105px;}
+a.btn, a.btn i {cursor: pointer;}
+#giro-date {margin-bottom: 25px;}
+table td.qty input {width: 40px;}
+.hide-it {display: none;}
+.report-daterange .add-on {margin:0 -4px 10px -4px;padding:5px;}
+.report-daterange button.reload {margin: -10px 0 0;}
