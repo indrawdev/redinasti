@@ -107,6 +107,9 @@ class Giro extends CI_Controller {
         $this->data['content_layout'] = 'form';
     }
     
+    /**
+     * cash giro
+     */
     public function cashed_giro() {
         $this->layout = 'none';
         $json = array();
