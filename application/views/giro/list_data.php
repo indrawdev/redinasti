@@ -10,10 +10,10 @@
         <td>#<?=$dt['giro_invoice']?></td>
         -->
         <td class="center">
-            <?php if ($dt['giro_status'] != 1) : ?>
+            <?php //if ($dt['giro_status'] != 1) : ?>
                 <a href="<?= current_controller() ?>edit/<?= $dt['idx'] ?>" title="Edit Record" class="icon-pencil"></a>
                 <a title="Delete Record" class="icon-trash tangan hapus" data-url-rm="delete" data-id="<?=$dt['idx']?>"></a>
-            <?php endif; ?>
+            <?php //endif; ?>
         </td>
     </tr>
 <?php } ?>

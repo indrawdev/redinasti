@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </fieldset>
-                <?php if ($histories) : ?>
+                <?php if (isset($histories)) : ?>
                 <fieldset class="listHistory">
                     <legend>Histori</legend>
                     <div class="tabbable">
