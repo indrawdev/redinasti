@@ -109,7 +109,7 @@ class Division_purchase extends CI_Controller
                         }
                         $products = array_values($prod);
                         foreach ($products as $prd) {
-                            $buy_price = $this->Division_purchase->getProductBuyPrice($prd['id_product']);
+                            $buy_price = $this->Division_purchase_model->getProductBuyPrice($prd['id_product']);
                             $product['id_division_purchase'] = $last_id;
                             $product['id_division'] = $post['id_division'];
                             $product['id_product'] = $prd['id_product'];

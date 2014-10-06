@@ -166,6 +166,7 @@
             }).on('change', function(e) {
                 var product_id = e.val;
                 if (product_id) {
+                    $('#post_product_id_'+(this_id)).html('');
                     $.ajax({
                         url:'<?=$product_info_url?>',
                         type:'post',

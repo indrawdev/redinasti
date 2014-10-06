@@ -64,11 +64,13 @@ class Cashier extends CI_Controller
                         }
                         $products = array_values($prod);
                         foreach ($products as $prd) {
+                            $buy_price = $this->Cashier_model->getProductBuyPrice($prd['id_product']);
                             $product['id_division_purchase'] = $last_id;
                             $product['id_division'] = $post['id_division'];
                             $product['id_product'] = $prd['id_product'];
                             $product['purchase_qty'] = $prd['purchase_qty'];
                             $product['purchase_price'] = $prd['purchase_price'];
+                            $product['purchase_buy'] = $buy_price;
                             $total_price += ($prd['purchase_price']*$prd['purchase_qty']);
                             
                             // insert product to division stock
@@ -88,7 +90,7 @@ class Cashier extends CI_Controller
                             $total_price += $crd['price'];
 
                             // insert product to division stock
-                            $this->Division_purchase_model->InsertDivisionCredit($credit);
+                            $this->Cashier_model->InsertDivisionCredit($credit);
                         }
                     }
                     // update transaction

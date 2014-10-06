@@ -108,7 +108,7 @@ class Giro extends CI_Controller {
     }
     
     /**
-     * cash giro
+     * cash giro    
      */
     public function cashed_giro() {
         $this->layout = 'none';
