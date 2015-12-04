@@ -64,9 +64,9 @@
                             <?php foreach ($record['productions'] as $prod) : ?>
                                 <tr id="row<?=$i?>">
                                     <td><?=($i+1)?></td>
-                                    <td class="text-left"><?=$prod['item_name']?></td>
-                                    <td class="text-right">1</td>
                                     <td class="text-left"><?=$prod['production_code']?></td>
+                                    <td class="text-right">1</td>
+                                    <td class="text-left"><?=$prod['item_name']?></td>
                                     <td class="text-right">Rp. <?=myprice($prod['sales_price'])?></td>
                                     <td class="text-right"><?=$prod['discount_percentage']?></td>
                                     <td class="text-right">
