@@ -168,16 +168,11 @@
                             <tbody>
                             <?php if (isset($post['post_cost']) && count($post['post_cost'])>0) : $i=0; ?>
                                 <?php foreach ($post['post_cost'] as $cost) : ?>
-                                    <tr id="row<?=$i?>">
-                                        <td class="note"><textarea name="post_cost[<?=$i?>][post]" Rp. <input type="text" name="post_product[<?=$i?>][purchase_price]" id="post_product_price_<?=$i?>" value="<?=(isset($prod['purchase_price'])) ? $prod['purchase_price'] : '' ?>" class="input-text"/></td>
-                                        <td class="qty"><input type="text" name="post_product[<?=$i?>][purchase_qty]" id="post_product_qty_<?=$i?>" value="<?=(isset($prod['purchase_qty'])) ? $prod['purchase_qty'] : '' ?>" class="input-text"/></td>
-                                        <td><button type="button" class="btn btn-danger delProduct" id="delProduct-<?=$i?>" onclick="delProduct('<?=$i?>')">(-)</button></td>
-                                    </tr>
                                     <tr id="row-cost<?=$i?>">
                                         <td class="cost_desc">
-                                            <textarea id="post_cost_note_<?=$i?>" rows="2" class="input-block-level" name="post_cost[<?=$i?>][note]" style="resize: none"></textarea>
+                                            <textarea id="post_cost_note_<?=$i?>" rows="2" class="input-block-level" name="post_cost[<?=$i?>][note]" style="resize: none"><?=(isset($cost['note'])) ? $cost['note'] : '' ?></textarea>
                                         </td>
-                                        <td class="cost_price">Rp. <input type="text" name="post_cost[<?=$i?>][cost]" id="post_cost_cost_<?=$i?>" value="" class="input-text othercost-input"/></td>
+                                        <td class="cost_price">Rp. <input type="text" name="post_cost[<?=$i?>][cost]" id="post_cost_cost_<?=$i?>" value="<?=(isset($cost['cost'])) ? $cost['cost'] : '' ?>" class="input-text othercost-input"/></td>
                                         <td><button type="button" class="btn btn-danger delOtherCost" id="delOtherCost-<?=$i?>" onclick="delOtherCost('<?=$i?>')">(-)</button></td>
                                     </tr>
                                 <?php $i++; endforeach; ?>

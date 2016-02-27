@@ -129,12 +129,12 @@
                             <?php foreach ($record['costs'] as $cost) : ?>
                                 <tr id="row<?=$i?>">
                                     <td><?=($i+1)?></td>
-                                    <td class="productOption"><?=$prod['production_cost_note']?></td>
-                                    <td class="qty text-right">Rp. <?=myprice($prod['production_cost'])?></td>
+                                    <td class="productOption"><?=$cost['production_cost_note']?></td>
+                                    <td class="qty text-right">Rp. <?=myprice($cost['production_cost'])?></td>
                                 </tr>
-                            <?php $i++; $total_price += $prod['production_cost']; endforeach; ?>
+                            <?php $i++; $total_price += $cost['production_cost']; endforeach; ?>
                             <tr class="footer" id="tableFooter">
-                                <td colspan="4">&nbsp;</td>
+                                <td colspan="2">&nbsp;</td>
                                 <td class="text-right">Rp. <strong><?=myprice($total_price)?></strong></td>
                             </tr>
                         <?php endif; ?>

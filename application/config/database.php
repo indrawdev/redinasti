@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'redinast_nadera';
-$db['default']['password'] = '1qaZXsw2!';
-$db['default']['database'] = 'redinast_nadera';
+$db['default']['username'] = 'redinasti';
+$db['default']['password'] = 'anukan123';
+$db['default']['database'] = 'redinastidb';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = 'app_';
 $db['default']['pconnect'] = TRUE;
